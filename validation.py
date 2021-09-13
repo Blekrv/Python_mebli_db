@@ -30,6 +30,36 @@ USERS = {"id": [int, number_pattern],
          "role": [str, role_pattern],
          "discount": [int, number_pattern]}
 
+ORDERS = {
+    "id":[int, number_pattern],
+    "date_of_order" :[str, date_pattern],
+    "customer_id" : [int, number_pattern],
+    "product_id": [int, number_pattern],
+    "price":[int, number_pattern]
+}
+
+PRODUCT = {
+    "id":[int, number_pattern],
+    "code":[int, number_pattern],
+    "product_name":[str],
+    "unit_price":[int, number_pattern],
+    "count":[int, number_pattern],
+    "description":[str],
+    "img":[str],
+    "sub_category_id":[int, number_pattern]
+}
+
+PRODUCT_CATEGORY = {
+    "id":[int, number_pattern],
+    "category_name":[str]
+}
+
+PRODUCT_SUBCATEGORY = {
+    "id":[int, number_pattern],
+    "subcategory_name":[str],
+    "category_name":[int, number_pattern]
+}
+
 
 class Validate(unittest.TestCase):
     def validate(self, request, model, model_name):

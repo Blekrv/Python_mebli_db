@@ -28,26 +28,26 @@ cursor = connection.cursor()
 # cursor.execute(category)
 # connection.commit()
 
-sub_category = """CREATE TABLE product_subcategory(
-    id SERIAL PRIMARY KEY,
-    subcategory_name varchar(50) NOT NULL,
-    category_name INT REFERENCES product_category(id)
-)"""
-cursor.execute(sub_category)
-connection.commit()
+# sub_category = """CREATE TABLE product_subcategory(
+#     id SERIAL PRIMARY KEY,
+#     subcategory_name varchar(50) NOT NULL,
+#     category_name INT REFERENCES product_category(id)
+# )"""
+# cursor.execute(sub_category)
+# connection.commit()
 
-product = """CREATE TABLE product(
-    id SERIAL PRIMARY KEY,
-    code varchar(6) NOT NULL,
-    product_name varchar(50) NOT NULL,
-    unit_price real NOT NULL,
-    count INT NOT NULL,
-    description varchar(500) NOT NULL,
-    img varchar(200) NOT NULL,
-    sub_category_id INT REFERENCES product_subcategory(id)
-)"""
-cursor.execute(product)
-connection.commit()
+# product = """CREATE TABLE product(
+#     id SERIAL PRIMARY KEY,
+#     code varchar(6) NOT NULL,
+#     product_name varchar(50) NOT NULL,
+#     unit_price real NOT NULL,
+#     count INT NOT NULL,
+#     description varchar(500) NOT NULL,
+#     img varchar(200) NOT NULL,
+#     sub_category_id INT REFERENCES product_subcategory(id)
+# )"""
+# cursor.execute(product)
+# connection.commit()
 
 orders = """CREATE TABLE orders(
     id SERIAL PRIMARY KEY,
